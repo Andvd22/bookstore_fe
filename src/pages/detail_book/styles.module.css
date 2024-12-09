@@ -1,0 +1,12 @@
+.title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.comment {
+    & :global(.mantine-Input-input) {
+        border-bottom: 1px solid black !important;
+        border-radius: 0px !important;
+        background-color: #FBF8F5 !important;
+    }
+}

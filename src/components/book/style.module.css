@@ -1,0 +1,58 @@
+.book {
+    position: relative;
+    background-color: #83d0c9;
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.book::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background-color: #5ba7a0;
+    border-radius: 10px 0 0 10px;
+}
+
+.bookmark {
+    position: absolute;
+    bottom: -20px;
+    right: 15px;
+    width: 20px;
+    height: 50px;
+    background-color: #f6c771;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
+}
+
+.book_cover {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* For WebKit browsers (Chrome, Safari) */
+    -webkit-box-orient: vertical;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    display: box; /* Fallback for non-webkit browsers */
+    line-clamp: 2; /* Standard property (not fully supported in all browsers yet) */
+
+    max-height: 3em; /* Restrict to 2 lines (assuming line-height is 1.5em) */
+    line-height: 1.5em; /* Height of each line */
+}

@@ -1,0 +1,21 @@
+.root {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #000;
+}
+
+.root button {
+    border-radius: 8px !important;
+}
+
+.text {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* For WebKit browsers (Chrome, Safari) */
+    -webkit-box-orient: vertical;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    display: box; /* Fallback for non-webkit browsers */
+    line-clamp: 1; /* Standard property (not fully supported in all browsers yet) */
+}

@@ -1,0 +1,14 @@
+.text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* For WebKit browsers (Chrome, Safari) */
+    -webkit-box-orient: vertical;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    display: box; /* Fallback for non-webkit browsers */
+    line-clamp: 2; /* Standard property (not fully supported in all browsers yet) */
+
+    max-height: 3em; /* Restrict to 2 lines (assuming line-height is 1.5em) */
+    line-height: 1.5em; /* Height of each line */
+}
